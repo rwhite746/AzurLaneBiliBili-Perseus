@@ -24,12 +24,12 @@ done
 chmod +x apkeep
 
 # Download Azur Lane
-if [ ! -f "com.bilibili.AzurLane.apk" ]; then
+if [ ! -f "com.tencent.tmgp.bilibili.blhx_8210.apk" ]; then
     echo "Get Azur Lane apk"
 
     # eg: wget "your download link" -O "your packge name.apk" -q
     #if you want to patch .xapk, change the suffix here to wget "your download link" -O "your packge name.xapk" -q
-    wget https://pkg.biligame.com/games/blhx_8.2.1_0820_1_20240830_041443_51682.apk -O com.bilibili.AzurLane.apk -q
+    wget https://imtt2.dd.qq.com/sjy.00008/sjy.00002/16891/apk/C85054D90230781EC7B77420527C9E91.apk?fsname=com.tencent.tmgp.bilibili.blhx_8210.apk -O com.tencent.tmgp.bilibili.blhx_8210.apk -q
     echo "apk downloaded !"
     
     # if you can only download .xapk file uncomment 2 lines below. (delete the '#')
@@ -44,7 +44,7 @@ if [ ! -d "Perseus" ]; then
 fi
 
 echo "Decompile Azur Lane apk"
-java -jar apktool.jar -q -f d com.bilibili.AzurLane.apk
+java -jar apktool.jar -q -f d com.tencent.tmgp.bilibili.blhx_8210.apk
 
 echo "Copy Perseus libs"
 cp -r Perseus/. com.bilibili.AzurLane/lib/
